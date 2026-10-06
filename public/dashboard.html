@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JobPlacer AI</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="dashboard">
+
+    <aside class="sidebar">
+        <h2>💼 JobPlacer</h2>
+
+        <button>🏠 Home</button>
+        <button>💬 AI Chat</button>
+        <button>📄 Resume</button>
+        <button>💻 Coding</button>
+        <button>🧠 Aptitude</button>
+        <button>🎤 Interview</button>
+
+        <div class="sidebar-bottom">
+            <button id="logout-btn">🚪 Logout</button>
+        </div>
+    </aside>
+
+    <main class="main-content">
+
+        <header class="topbar">
+            <div>
+                <h1>AI Placement Assistant</h1>
+                <p id="user-info">Loading...</p>
+            </div>
+        </header>
+
+        <section class="chat-container">
+        <div class="quick-actions">
+
+    <button onclick="quickQuestion('Help me create a professional resume')">
+        📄 Resume
+    </button>
+
+    <button onclick="quickQuestion('Give me interview preparation tips')">
+        🎤 Interview
+    </button>
+
+    <button onclick="quickQuestion('Give me aptitude practice questions')">
+        🧠 Aptitude
+    </button>
+
+    <button onclick="quickQuestion('Give me coding interview questions')">
+        💻 Coding
+    </button>
+
+    <button onclick="quickQuestion('How can I prepare for placements?')">
+        🎯 Placement
+    </button>
+
+</div>
+            <div id="chat-box" class="chat-box">
+
+                <div class="bot-message">
+                    👋 Hi! I'm your JobPlacer AI Assistant.
+
+                    I can help you with:
+                    • Resume preparation
+                    • Interview preparation
+                    • Aptitude
+                    • Coding
+                    • Technical skills
+                    • Placement preparation
+                    • Career guidance
+
+                    What would you like to prepare today?
+                </div>
+
+            </div>
+
+            <div class="input-area">
+                <input
+                    type="text"
+                    id="user-input"
+                    placeholder="Ask anything about placements..."
+                >
+
+                <button onclick="sendMessage()">Send</button>
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<script type="module" src="dashboard.js"></script>
+</body>
+</html>
